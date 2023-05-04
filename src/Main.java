@@ -1,21 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-
         CreditPaymentService creditServ = new CreditPaymentService();
-        int ostatok = 1_000_000;
-        int year = 1;
-        double pp = 9.99;
-        int res = creditServ.calculate(ostatok, year, pp);
-        System.out.println("Ежемесячный платёж: "+ res + " на " + year + " год(а)");
+        double balanceLoanAmount = 1_000_000;
+        int years = 1;
+        double monthlyInterestRate = 9.99;
+        double res = creditServ.calculate(balanceLoanAmount, years, monthlyInterestRate);
+        System.out.println("Ежемесячный платёж: " + res + " на " + years + " год(а)");
 
-        year = 2;
-        int res2 = creditServ.calculate(ostatok, year, pp);
-        System.out.println("Ежемесячный платёж: "+ res2 + " на " + year + " год(а)");
+        years = 2;
+        double res2 = creditServ.calculate(balanceLoanAmount, years, monthlyInterestRate);
+        System.out.println("Ежемесячный платёж: " + res2 + " на " + years + " год(а)");
 
-        year = 3;
-        int res3 = creditServ.calculate(ostatok, year, pp);
-        System.out.println("Ежемесячный платёж: "+ res3 + " на " + year + " год(а)");
-
+        years = 3;
+        double res3 = creditServ.calculate(balanceLoanAmount, years, monthlyInterestRate);
+        System.out.println("Ежемесячный платёж: " + res3 + " на " + years + " год(а)");
 
         /*
         double res;
